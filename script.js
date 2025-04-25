@@ -130,8 +130,10 @@ let songs = [
 
 const playlistElement = document.getElementById("playlist");
 
+
 for (let song of songs) {
   const songDivElement = document.createElement("div");
+  songDivElement.classList.add("song");
 
   // title
   const titleElement = document.createElement("h3");
@@ -145,10 +147,10 @@ for (let song of songs) {
   const durationElement = document.createElement("p");
   durationElement.innerHTML = song.duration;
   songDivElement.appendChild(durationElement);
-  // liked (add more?)
+  // liked (incomplete?)
   if (song.liked) {
     const likedElement = document.createElement("span");
-    likedElement.textContent = "⭐ Favorite";
+    likedElement.textContent = "❤️";
     songDivElement.appendChild(likedElement);
   }
   // audio
@@ -165,13 +167,13 @@ for (let song of songs) {
 }
 
 // incomplete. doesn't filter 
-// let favoriteBtnElement = document.getElementById("favorite-btn")
-// favoriteBtnElement.addEventListener("click", handleToggleFavorites)
+let favoriteBtnElement = document.getElementById("favorite-btn")
+favoriteBtnElement.addEventListener("click", handleToggleFavorites)
 
-// function handleToggleFavorites(event) {
-//     event.preventDefault();
-//     document.body.classList.toggle(???);
-//     document.body.classList[0] === "???"
-//     ? (favoriteBtnElement.innerHTML = "All")
-//     : (favoriteBtnElement.innerHTML = "⭐ Favorites");
-// }
+function handleToggleFavorites(event) {
+    event.preventDefault();
+    document.body.classList.toggle("song.liked");
+    document.body.classList[0] === "song.liked"
+    ? (favoriteBtnElement.innerHTML = "All")
+    : (favoriteBtnElement.innerHTML = "❤️");
+}

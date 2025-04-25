@@ -1,64 +1,56 @@
-/* .favorites {
-   
-} */
-
-
 body {
-    font-family: Arial, sans-serif;
-    background: #f0f4f8;
-    padding: 2rem;
-    max-width: 700px;
-    margin: auto;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .song {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-  }
-  
-  .song h3 {
-    margin: 0;
-    color: #0077cc;
-  }
-  
-  .song p {
-    margin: 0.3rem 0;
-    color: #555;
-  }
-  
-  #favorite-btn {
-    font-size: 1em;
-    cursor: pointer;
-    background-color: red;
-    border-radius: 5px;
-    width: fit-content;
-    padding: 10px;
-    display: inline-block;
-  }
+  font-family: Arial, sans-serif;
+  background: #FAFAFA;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  border: 2px red solid;
+}
 
-  img {
- position: relative;   
- bottom: 50px;
- right: 100px;
+h1 {
+  text-align: center;
+  color: #333;
+  border: 2px red solid;
+}
 
-    
-  }
+.song {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
 
-  audio {
-    margin-bottom: 5px;
-  }
+.song h3 {
+  margin: 0;
+  color: #0077cc;
+}
 
-span {
-    position: relative;
-    top: 25px;
-    left: 80px;
-    
+.song p {
+  margin: 0.3rem 0;
+  color: #555;
+} 
+
+#favorite-btn {
+  font-size: 2em;
+  cursor: pointer;
+  /* width: fit-content;
+  padding: 10px;
+  display: inline-block; */
+}
+
+.song liked {
+  background-color: green;
+}
+
+audio {
+  width: fit-content;
+}
+
+div {
+  display: grid;
+  border: 2px red solid;
+  padding: 10px;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
 }
