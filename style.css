@@ -1,3 +1,8 @@
+/* .favorites {
+   
+} */
+
+
 body {
     font-family: Arial, sans-serif;
     background: #f0f4f8;
@@ -29,3 +34,31 @@ body {
     color: #555;
   }
   
+  #favorite-btn {
+    font-size: 1em;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  img {
+ position: relative;   
+ bottom: 50px;
+ right: 100px;
+
+    
+  }
+
+  audio {
+    margin-bottom: 5px;
+  }
+
+span {
+    position: relative;
+    top: 25px;
+    left: 80px;
+    
+}

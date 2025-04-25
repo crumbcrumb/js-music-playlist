@@ -163,3 +163,15 @@ for (let song of songs) {
 
   playlistElement.appendChild(songDivElement);
 }
+
+// incomplete. doesn't filter 
+// let favoriteBtnElement = document.getElementById("favorite-btn")
+// favoriteBtnElement.addEventListener("click", handleToggleFavorites)
+
+// function handleToggleFavorites(event) {
+//     event.preventDefault();
+//     document.body.classList.toggle(???);
+//     document.body.classList[0] === "???"
+//     ? (favoriteBtnElement.innerHTML = "All")
+//     : (favoriteBtnElement.innerHTML = "⭐ Favorites");
+// }
