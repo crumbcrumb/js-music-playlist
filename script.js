@@ -149,7 +149,7 @@ for (let song of songs) {
   songDivElement.appendChild(durationElement);
   // liked (incomplete?)
   if (song.liked) {
-    const likedElement = document.createElement("span");
+    let likedElement = document.createElement("span");
     likedElement.textContent = "❤️";
     songDivElement.appendChild(likedElement);
   }
