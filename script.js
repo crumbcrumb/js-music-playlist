@@ -150,7 +150,7 @@ for (let song of songs) {
   // liked (incomplete?)
   if (song.liked) {
     let likedElement = document.createElement("span");
-    likedElement.textContent = "❤️";
+    likedElement.textContent = "⭐";
     songDivElement.appendChild(likedElement);
   }
   // audio
@@ -175,5 +175,5 @@ function handleToggleFavorites(event) {
     document.body.classList.toggle("song.liked");
     document.body.classList[0] === "song.liked"
     ? (favoriteBtnElement.innerHTML = "All")
-    : (favoriteBtnElement.innerHTML = "❤️");
+    : (favoriteBtnElement.innerHTML = "⭐");
 }
