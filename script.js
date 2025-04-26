@@ -149,8 +149,8 @@ for (let song of songs) {
   songDivElement.appendChild(durationElement);
   // liked (incomplete?)
   if (song.liked) {
-    let likedElement = document.createElement("span");
-    likedElement.textContent = "⭐";
+    let likedElement = document.createElement("p");
+    likedElement.textContent = "⭐ Favorite";
     songDivElement.appendChild(likedElement);
   }
   // audio
@@ -166,7 +166,7 @@ for (let song of songs) {
   playlistElement.appendChild(songDivElement);
 }
 
-// incomplete. doesn't filter 
+// doesn't actually filter 
 let favoriteBtnElement = document.getElementById("favorite-btn")
 favoriteBtnElement.addEventListener("click", handleToggleFavorites)
 
