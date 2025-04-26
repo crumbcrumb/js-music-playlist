@@ -137,15 +137,15 @@ for (let song of songs) {
 
   // title
   const titleElement = document.createElement("h3");
-  titleElement.innerHTML = song.title;
+  titleElement.textContent = song.title;
   songDivElement.appendChild(titleElement);
   // artist
   const artistELement = document.createElement("p");
-  artistELement.innerHTML = song.artist;
+  artistELement.textContent = song.artist;
   songDivElement.appendChild(artistELement);
   // duration
   const durationElement = document.createElement("p");
-  durationElement.innerHTML = song.duration;
+  durationElement.textContent = song.duration;
   songDivElement.appendChild(durationElement);
   // liked (incomplete?)
   if (song.liked) {
@@ -174,6 +174,6 @@ function handleToggleFavorites(event) {
     event.preventDefault();
     document.body.classList.toggle("song.liked");
     document.body.classList[0] === "song.liked"
-    ? (favoriteBtnElement.innerHTML = "All")
-    : (favoriteBtnElement.innerHTML = "⭐");
+    ? (favoriteBtnElement.textContent = "All")
+    : (favoriteBtnElement.textContent = "⭐");
 }
