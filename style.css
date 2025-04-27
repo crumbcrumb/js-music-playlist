@@ -43,10 +43,11 @@ h1 {
 #favorite-btn {
   font-size: 2em;
   cursor: pointer;
+  width: fit-content;
 }
 
 audio {
-  width: fit-content;
+  width: 250px;
 }
 
 div {
@@ -54,4 +55,8 @@ div {
   padding: 10px;
   grid-template-columns: auto auto;
   grid-gap: 10px;
+}
+
+img {
+  margin: 1px;
 }

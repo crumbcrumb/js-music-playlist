@@ -134,6 +134,7 @@ const playlistElement = document.getElementById("playlist");
 for (let song of songs) {
   const songDivElement = document.createElement("div");
   songDivElement.classList.add("song");
+  songDivElement.setAttribute("data-liked", song.liked);
 
   // title
   const titleElement = document.createElement("h3");
@@ -147,7 +148,7 @@ for (let song of songs) {
   const durationElement = document.createElement("p");
   durationElement.textContent = song.duration;
   songDivElement.appendChild(durationElement);
-  // liked (incomplete?)
+  // liked 
   if (song.liked) {
     let likedElement = document.createElement("p");
     likedElement.textContent = "⭐ Favorite";
@@ -166,14 +167,25 @@ for (let song of songs) {
   playlistElement.appendChild(songDivElement);
 }
 
-// doesn't actually filter 
-let favoriteBtnElement = document.getElementById("favorite-btn")
-favoriteBtnElement.addEventListener("click", handleToggleFavorites)
+// filter liked songs
+let favoriteBtnElement = document.getElementById("favorite-btn");
+favoriteBtnElement.addEventListener("click", handleToggleFavorites);
+
+let showFavoritesOnly = false; 
 
 function handleToggleFavorites(event) {
-    event.preventDefault();
-    document.body.classList.toggle("song.liked");
-    document.body.classList[0] === "song.liked"
-    ? (favoriteBtnElement.textContent = "All")
-    : (favoriteBtnElement.textContent = "⭐");
+  event.preventDefault();
+  showFavoritesOnly = showFavoritesOnly ? false : true;
+
+  favoriteBtnElement.textContent = showFavoritesOnly ? "All" : "⭐";
+
+  const songElements = document.querySelectorAll(".song");
+
+  for (let i = 0; i < songElements.length; i++) {
+    const songElement = songElements[i];
+    const isLiked = songElement.getAttribute("data-liked") === "true";
+  
+    songElement.style.display = (showFavoritesOnly && !isLiked) ? "none" : "block";
+  }
 }
+
