@@ -47,7 +47,7 @@ h1 {
 }
 
 audio {
-  width: 250px;
+  width: 175px;
 }
 
 div {
@@ -58,5 +58,5 @@ div {
 }
 
 img {
-  margin: 1px;
+  float: inline-start ;
 }
