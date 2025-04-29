@@ -134,7 +134,6 @@ const playlistElement = document.getElementById("playlist");
 for (let song of songs) {
   const songDivElement = document.createElement("div");
   songDivElement.classList.add("song");
-  songDivElement.setAttribute("data-liked", song.liked);
 
   // title
   const titleElement = document.createElement("h3");
